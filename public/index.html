@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <link
+      rel="stylesheet"
+      href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"
+    />
+    <title>Toptify</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="jquery.js"></script>
+    <script src="ConsumeWS.js"></script>
+    <!-- <style type="text/css">
+      #login,
+      #loggedin {
+        display: none;
+      }
+      .text-overflow {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width: 500px;
+      }
+    </style> -->
+  </head>
+
+  <body>
+    <div class="container">
+      <div id="login" bis_skin_checked="1">
+				<div class="header-section" bis_skin_checked="1">
+					<div class="row" bis_skin_checked="1">
+						<div class="col-12" bis_skin_checked="1">
+							<h1>Toptify</h1>
+							
+						</div>
+						<div class="col-12" bis_skin_checked="1">
+							<a href="/login" class="login-btn">Iniciar sesión con Spotify</a>
+						</div>
+						
+					</div>
+				</div>
+								
+				<div class="seperator" bis_skin_checked="1">
+					<hr>
+          <p class="info">
+            This website was inspired by <a href="https://receiptify.herokuapp.com/">Receiptify</a>!</p>
+            <div class="emojiClass">
+            <img alt="🇲🇽" class="emoji" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAABICAMAAABiM0N1AAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAEgUExURUdwTGUKGa9eawc2J490dl5gW83NzVI5QAE6J4YeMHqBfYmLhxUuJAE1JE8SGnmDf1qEd2ARHM7OzsvLy2CIe3uHg4SEhMvLy6thbWQRHqthba5lcMzMzMzMzDBaTAc1J18PG8rGxgEvIMvLy1qBdHxpbKqqqqgOJ/////z8/KwTKwNZPfr6+rcdNhJqTv7+/gphRbIXMQddQg9lSRZuUsQmQL4iPPj3+ANPN60hOMYmOwFCLfTz8pUhM1GPehxxVu28xAJnSd3c1evt7Obl4Ed+bLu+udfRsowPI3UUJJJrT8K2mKtCU5iVljhyX6OJaKiura2sf7IvRIBcQrJNXm6goZoaL25LNde5hs6gZr86UNm8wa3W3Vw9LYfFzUOQls/bEpwAAAAndFJOUwD8/uYoFvsJrKJT+Db+dILxWSXY3KrcR+erjL6FtZrE0GdRo7/itWP596QAAANqSURBVFjD7ddpU9pAGAdwWwlRULzqXc+2Q4KBCOEsUTSJiSRK5IZy+P2/RZ/dDSERCy594wv+zCDMwG+efWSvpaVFFlnkU4ZlAm5Ydi5ie3v/4uLo+PjgK8nBwfHRUShAhTH7F99PdoJBpQdAo9F4ctIA7vgoMP4cO7UOYiiapqm9P5BarVYgqdWeQF0dfZ09PQ0F3ukGMn5gAxBVlWVZvMtkMtl4PJmMxaLRaCuKrJsxtFKpbP7c3QgFAgzLsgwTCIU2dk92dnY8Rg6Fv8tmsgSKkiTjBS+UT1QeHh42Nze/4cCLh6ZrYELAz+IYIhVFC36omJdKpUoFaU4qt6rqKiSCIBAoO4ImKyrmr1IpSUqkS+DBo1RK3+ZkZ0DCONzd70xmBgRJpa6vQUsg7x5DfofnR1B8BMXeg1IIAgmodBqgHIaI4GQCik6DkFPCEHZchRd9UGx6RZIP8pQjwsMDjUr6ACQQyEFIJqBpFSVcCDcIGZxICV37IIEUJHIoIvmDoAxtRQQSOdWyeoTxQDHKingOHLPdtuUxlJ0D4gVZMW273h7YbytKUkGibHS6dt2s1+sK7dASPohXOoY9qJtmW6eD7v0VyZqmdM2BXQVIVWl6JPkgGJmlWFCPGjSDVYOmRz4I/mmq0e2a7UHbCmqGTDM0ydMjUbOUO6XT6UC3TcWw5v4dcUpVvm32+n3LfmnKeGTz9YgXDKXfbL6+vjabQ8WgmSJvesQZVV4b9jvhoarZGi2U8DbbqCr9Yber64b2ZopQVZTjhapl6C+6VSVTbf5lBH7ZVUu3NIGjXY+kydnP5QSOm1jYKOcaXo8wM7n4R6lXSPG9xX/mduSDxov/m30tOXuDnFz8UQTy5GzZ8Rlb9gRE9jX4vhsRoOzMvd+7YzuQ7wThQh+syLPTeqSc4BxrwCkUnNNRazaU9pxGcpiBt3Bg6hUKLcjjKK1YYdohIuFCmEKEpgSDuq4/l1G+jFIuP7ZuPgJBVA0bLy/Pz+Fw+Nf54WoksgWJRCKH59gqe6D1Yj7v7/Y9HP0IQYy9PTishgLegzS8ZNZAKx96oPX1omORPklXFYcAgxD/PMxvbbk6c7myjC2kkRQlNBJkoCoorgnMZWTlbNnN2dnpxgYug53j5gIXnzUShhl14X/uUYur5CKLfOb8Ba339RtXLD6UAAAAAElFTkSuQmCC">
+          </div>
+          <p></p>
+          <p class="info">
+            Made by <a href="https://youngsith.com/">YoungSith</a>. <br>
+            Designed by <a href="https://instagram.com/lafatomic">MissFatomic</a>. <br>
+            <a href="https://paypal.me/youngsith23" target="_blank">PayPal</a> |
+            <a href="https://venmo.com/youngsith23" target="_blank">Venmo</a> |
+            <a href="https://cash.app/youngsith23" target="_blank">CashApp</a>
+          </p>
+				</div>
+				
+			</div>
+      <div id="loggedin" style="display: none;" bis_skin_checked="1">
+        <br>
+        <h1>Toptify</h1>
+        <br>
+        <p>Rolitas</p>
+          <div id="options" bis_skin_checked="1">
+            <button class="time-btn" id="short_term">Este mes</button>
+            <button class="time-btn" id="medium_term">Últimos 6 meses</button>
+            <button class="time-btn" id="long_term">Las de toda la vida</button>
+          </div>
+          <br>
+          <p>Artistas</p>
+          <div id="options" bis_skin_checked="1">
+            <button class="time-btn" id="ar_short_term">Este mes</button>
+            <button class="time-btn" id="ar_medium_term">Últimos 6 meses</button>
+            <button class="time-btn" id="ar_long_term">Los de toda la vida</button>
+          </div>
+        
+         <!--  <div class="buttons">
+            <p>Rolas</p>
+          <button type="submit" onclick="retrieveTracks('short_term')">
+            Este mes
+          </button>
+          <button type="submit" onclick="retrieveTracks('medium_term')">
+            Últimos 6 meses
+          </button>
+          <button type="submit" onclick="retrieveTracks('long_term')">
+            De toda la vida
+          </button>
+        </div>
+        
+          <div class="buttons">
+            <p>Artistas</p>
+          <button type="submit" onclick="retrieveArtists('short_term')">
+            Este mes
+          </button>
+          <button type="submit" onclick="retrieveArtists('medium_term')">
+            Últimos 6 meses
+          </button>
+          <button type="submit" onclick="retrieveArtists('long_term')">
+            De toda la vida
+          </button>
+        </div> -->
+          <div id="toptify" bis_skin_checked="1"></div>
+          <div id="toptify-artists" bis_skin_checked="1"></div>
+    </div>
+      <script id="user-profile-template" type="text/x-handlebars-template">
+        <div class='receiptContainer'>
+          
+          
+          <table class='tracks'>
+            <tr>
+            {{#each tracks1}}
+              
+                
+                <td class='song'>
+                  {{this.name}}
+                  {{#each this.artists}}
+                    <span>
+                      {{this.name}}
+                    </span>
+                  {{/each}}
+                </td>
+                
+              
+            {{/each}}
+          </tr>
+            <tr>
+            {{#each tracks2}}
+                <td class='song'>
+                  {{this.name}}
+                  {{#each this.artists}}
+                    <span>
+                      {{this.name}}
+                    </span>
+                  {{/each}}
+                </td>
+                
+              
+            {{/each}}
+          </tr>
+            <tr>
+            {{#each tracks3}}
+                <td class='song'>
+                  {{this.name}}
+                  {{#each this.artists}}
+                    <span>
+                      {{this.name}}
+                    </span>
+                  {{/each}}
+                </td>
+                
+              
+            {{/each}}
+          </tr>
+            <tr>
+            {{#each tracks4}}
+                <td class='song'>
+                  {{this.name}}
+                  {{#each this.artists}}
+                    <span>
+                      {{this.name}}
+                    </span>
+                  {{/each}}
+                </td>
+                
+              
+            {{/each}}
+          </tr>
+            <tr>
+            {{#each tracks5}}
+                <td class='song'>
+                  {{this.name}}
+                  {{#each this.artists}}
+                    <span>
+                      {{this.name}}
+                    </span>
+                  {{/each}}
+                </td>
+                
+              
+            {{/each}}
+          </tr>
+            </table> 
+          
+        </div>
+        
+        
+        <button class="time-btn" id="download">¡Descarga tu top!</button>
+        <!-- <script data-ad-client="ca-pub-9313350967876991" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->
+        </script>
+      <script id="user-profile-template-artist" type="text/x-handlebars-template">
+        
+        <div class='artistsContainer'>
+          
+          
+        
+          <table class='artists'>
+            <tr>
+            {{#each artists1}}
+              
+                <td class='name'>
+                    <img src="{{this.images.2.url}}" class="artistImg"/>
+                </td>
+              
+            {{/each}}
+            </tr>
+            <tr>
+            {{#each artists2}}
+              
+                <td class='name'>
+                    <img src="{{this.images.2.url}}" class="artistImg"/>
+                </td>
+              
+            {{/each}}
+            </tr>
+            <tr>
+            {{#each artists3}}
+              
+                <td class='name'>
+                    <img src="{{this.images.2.url}}" class="artistImg"/>
+                </td>
+              
+            {{/each}}
+            </tr>
+            <tr>
+            {{#each artists4}}
+              
+                <td class='name'>
+                    <img src="{{this.images.2.url}}" class="artistImg"/>
+                </td>
+              
+            {{/each}}
+            </tr>
+            <tr>
+            {{#each artists5}}
+              
+                
+                <td class='name'>
+                    <img src="{{this.images.2.url}}" class="artistImg"/>
+                </td>
+              
+            {{/each}}
+            </tr>
+            </table>
+            
+        </div>
+        <br><br>
+        <p><a href="https://www.youtube.com/watch?v=aSLZFdqwh7E">¿Por qué Stan?</a></p>
+        <!-- <button class="time-btn" id="download">Download Image</button> -->
+        <!-- <script data-ad-client="ca-pub-9313350967876991" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->
+        </script>
+        
+				
+    </div>
+
+   
+
+    <script id="oauth-template" type="text/x-handlebars-template">
+      <h2>oAuth info</h2>
+      <dl class="dl-horizontal">
+        <dt>Access token</dt><dd class="text-overflow">{{access_token}}</dd>
+        <dt>Refresh token</dt><dd class="text-overflow">{{refresh_token}}</dd>
+      </dl>
+    </script>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0-alpha.1/handlebars.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script>
+      (function () {
+        /**
+         * Obtains parameters from the hash of the URL
+         * @return Object
+         */
+        function getHashParams() {
+          var hashParams = {};
+          var e,
+            r = /([^&;=]+)=?([^&;]*)/g,
+            q = window.location.hash.substring(1);
+          while ((e = r.exec(q))) {
+            hashParams[e[1]] = decodeURIComponent(e[2]);
+          }
+          return hashParams;
+        }
+
+        /* var userProfileSource = document.getElementById(
+            "user-profile-template"
+          ).innerHTML,
+          userProfileTemplate = Handlebars.compile(userProfileSource),
+          userProfilePlaceholder = document.getElementById("user-profile"); */
+
+          function hiddenClone(element) {
+    // Create clone of element
+    var clone = element.cloneNode(true);
+
+    // Position element relatively within the
+    // body but still out of the viewport
+    var style = clone.style;
+    style.position = "relative";
+    style.top = window.innerHeight + "px";
+    style.left = 0;
+    // Append clone to body and return the clone
+    document.body.appendChild(clone);
+    return clone;
+  }
+
+  function downloadImg(fileName) {
+    var offScreen = document.querySelector(".receiptContainer");
+    window.scrollTo(0, 0);
+    var clone = hiddenClone(offScreen);
+    // Use clone with htm2canvas and delete clone
+    html2canvas(clone, { scrollY: -window.scrollY }).then((canvas) => {
+      var dataURL = canvas.toDataURL("image/png", 1.0);
+      document.body.removeChild(clone);
+      var link = document.createElement("a");
+      console.log(dataURL);
+      link.href = dataURL;
+      link.download = `${fileName}.png`;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    });
+  }
+  function downloadImgArtist(fileName) {
+    var offScreen = document.querySelector(".artistsContainer");
+    window.scrollTo(0, 0);
+    var clone = hiddenClone(offScreen);
+    // Use clone with htm2canvas and delete clone
+    html2canvas(clone, { scrollY: -window.scrollY }).then((canvas) => {
+      var dataURL = canvas.toDataURL("image/png", 1.0);
+      document.body.removeChild(clone);
+      var link = document.createElement("a");
+      console.log(dataURL);
+      link.href = dataURL;
+      link.download = `${fileName}.png`;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    });
+  }
+
+  function retrieveTracks(timeRangeSlug, domNumber, domPeriod) {
+    var userProfileSource = document.getElementById(
+        "user-profile-template"
+      ).innerHTML,
+      userProfileTemplate = Handlebars.compile(userProfileSource),
+      userProfilePlaceholder = document.getElementById("toptify");
+    var today = new Date();
+    var displayName = "RECEIPTIFY";
+    var dateOptions = {
+      weekday: "long",
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    };
+    let tracks1 = []
+    let tracks2 = []
+    let tracks3 = []
+    let tracks4 = []
+    let tracks5 = []
+    $.ajax({
+      url: `https://api.spotify.com/v1/me/top/tracks?limit=15&time_range=${timeRangeSlug}`,
+      headers: {
+        Authorization: "Bearer " + access_token,
+      },
+      success: function (response) {
+        let data = {
+          trackList: response.items,
+          total: 0,
+          date: today.toLocaleDateString("en-US", dateOptions).toUpperCase(),
+          json: true,
+        };
+        for (var i = 0; i < data.trackList.length; i++) {
+          
+          data.trackList[i].name = data.trackList[i].name.toUpperCase() + " - ";
+          data.trackList[i].id = (i + 1 < 10 ? "0" : "") + (i + 1);
+          
+          for (var j = 0; j < data.trackList[i].artists.length; j++) {
+            data.trackList[i].artists[j].name =
+              data.trackList[i].artists[j].name.trim();
+            data.trackList[i].artists[j].name =
+              data.trackList[i].artists[j].name.toUpperCase();
+            if (j != data.trackList[i].artists.length - 1) {
+              data.trackList[i].artists[j].name =
+                data.trackList[i].artists[j].name + ", ";
+            }
+
+            console.log(
+              data.trackList[i].name + data.trackList[i].artists[j].name
+            );
+            
+          }
+          switch(i)
+            {
+              case 0: tracks1.push(data.trackList[i])
+                break;
+              case 1: tracks1.push(data.trackList[i])
+                break;
+              case 2: tracks1.push(data.trackList[i])
+                break;
+              case 3: tracks2.push(data.trackList[i])
+                break;
+              case 4: tracks2.push(data.trackList[i])
+                break;
+              case 5: tracks2.push(data.trackList[i])
+                break;
+              case 6: tracks3.push(data.trackList[i])
+                break;
+              case 7: tracks3.push(data.trackList[i])
+                break;
+              case 8: tracks3.push(data.trackList[i])
+                break;
+              case 9: tracks4.push(data.trackList[i])
+                break;
+              case 10: tracks4.push(data.trackList[i])
+                break;
+              case 11: tracks4.push(data.trackList[i])
+                break;
+              case 12: tracks5.push(data.trackList[i])
+                break;
+              case 13: tracks5.push(data.trackList[i])
+                break;
+              case 14: tracks5.push(data.trackList[i])
+                break;
+            }
+        }
+        
+        
+
+        console.log(data.trackList);
+        console.log(tracks1);
+        console.log(tracks2);
+        console.log(tracks3);
+        console.log(tracks4);
+        console.log(tracks5);
+        
+        console.log(data.date);
+
+        userProfilePlaceholder.innerHTML = userProfileTemplate({
+          tracks1: tracks1,
+          tracks2: tracks2,
+          tracks3: tracks3,
+          tracks4: tracks4,
+          tracks5: tracks5,
+          num: domNumber,
+          name: displayName,
+          period: domPeriod,
+        });
+
+        document
+          .getElementById("download")
+          .addEventListener("click", () => downloadImg(timeRangeSlug));
+      },
+    });
+  }
+  function retrieveArtists(timeRangeSlug, domNumber, domPeriod) {
+    var userProfileSource = document.getElementById(
+        "user-profile-template-artist"
+      ).innerHTML,
+      userProfileTemplate = Handlebars.compile(userProfileSource),
+      userProfilePlaceholder = document.getElementById("toptify-artists");
+    var today = new Date();
+    var displayName = "RECEIPTIFY";
+    var dateOptions = {
+      weekday: "long",
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    };
+    let artists1 = [];
+    let artists2 = [];
+    let artists3 = [];
+    let artists4 = [];
+    let artists5 = [];
+    $.ajax({
+      url: `https://api.spotify.com/v1/me/top/artists?limit=13&time_range=${timeRangeSlug}`,
+      headers: {
+        Authorization: "Bearer " + access_token,
+      },
+      success: function (response) {
+        let data = {
+          artists: response.items,
+          total: 0,
+          date: today.toLocaleDateString("en-US", dateOptions).toUpperCase(),
+          json: true,
+        };
+        console.log("Son " + data.artists.length + " artistas");
+        for (var i = 0; i < data.artists.length; i++) {
+          if (i == 0) artists1.push(data.artists[i]);
+        }
+        /*       minutes = Math.floor(data.total / 60000);
+      seconds = ((data.total % 60000) / 1000).toFixed(0);
+      data.total = minutes + ":" + (seconds < 10 ? "0" : "") + seconds;  */
+
+        console.log(data.artists);
+        console.log(data.artists[1].images[1].url);
+
+        if(data.artists.length >= 13)
+        {
+          artists2.push(data.artists[1]);
+        artists2.push(data.artists[2]);
+
+        artists3.push(data.artists[3]);
+        artists3.push(data.artists[4]);
+        artists3.push(data.artists[5]);
+        artists4.push(data.artists[6]);
+        artists4.push(data.artists[7]);
+        artists4.push(data.artists[8]);
+        artists5.push(data.artists[9]);
+        artists5.push(data.artists[10]);
+        artists5.push(data.artists[11]);
+        }
+        else
+        {
+          artists2.push(data.artists[1]);
+        artists3.push(data.artists[2]);
+
+        artists4.push(data.artists[3]);
+        artists5.push(data.artists[4]);
+        
+        }
+
+        
+
+        userProfilePlaceholder.innerHTML = userProfileTemplate({
+          artists1: artists1,
+          artists2: artists2,
+          artists3: artists3,
+          artists4: artists4,
+          artists5: artists5,
+
+          num: domNumber,
+          name: displayName,
+          period: domPeriod,
+        });
+
+        document
+          .getElementById("download")
+          .addEventListener("click", () => downloadImgArtist(timeRangeSlug));
+      },
+    });
+  }
+
+       /*  var oauthSource = document.getElementById("oauth-template").innerHTML,
+          oauthTemplate = Handlebars.compile(oauthSource),
+          oauthPlaceholder = document.getElementById("oauth");
+ */
+        var params = getHashParams();
+
+        var access_token = params.access_token,
+          refresh_token = params.refresh_token,
+          error = params.error;
+
+        if (error) {
+          alert("There was an error during the authentication");
+        } else {
+          if (access_token) {
+            // render oauth info
+           /*  oauthPlaceholder.innerHTML = oauthTemplate({
+              access_token: access_token,
+              refresh_token: refresh_token,
+            }); */
+
+            $.ajax({
+              url: "https://api.spotify.com/v1/me",
+              headers: {
+                Authorization: "Bearer " + access_token,
+              },
+              success: function (response) {
+                /* userProfilePlaceholder.innerHTML =
+                  userProfileTemplate(response); */
+                console.log("SI SE PUDO");
+                $("#login").hide();
+                $("#loggedin").show();
+              },
+            });
+          } else {
+            // render initial screen
+            $("#login").show();
+            $("#loggedin").hide();
+          }
+          document.getElementById("short_term").addEventListener(
+      "click",
+      function () {
+        retrieveTracks("short_term", 1, "LAST MONTH");
+      },
+      false
+    );
+    document.getElementById("medium_term").addEventListener(
+      "click",
+      function () {
+        retrieveTracks("medium_term", 2, "LAST 6 MONTHS");
+      },
+      false
+    );
+    document.getElementById("long_term").addEventListener(
+      "click",
+      function () {
+        retrieveTracks("long_term", 3, "ALL TIME");
+      },
+      false
+    );
+          document.getElementById("ar_short_term").addEventListener(
+      "click",
+      function () {
+        retrieveArtists("short_term", 1, "LAST MONTH");
+      },
+      false
+    );
+    document.getElementById("ar_medium_term").addEventListener(
+      "click",
+      function () {
+        retrieveArtists("medium_term", 2, "LAST 6 MONTHS");
+      },
+      false
+    );
+    document.getElementById("ar_long_term").addEventListener(
+      "click",
+      function () {
+        retrieveArtists("long_term", 3, "ALL TIME");
+      },
+      false
+    );
+          
+        }
+      })();
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0-alpha.1/handlebars.min.js"></script>
+    
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+  </body>
+</html>
