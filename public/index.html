@@ -370,7 +370,9 @@
           date: today.toLocaleDateString("en-US", dateOptions).toUpperCase(),
           json: true,
         };
-        for (var i = 0; i < data.trackList.length; i++) {
+        if(data.trackList.length > 0)
+        {
+          for (var i = 0; i < data.trackList.length; i++) {
           
           data.trackList[i].name = data.trackList[i].name.toUpperCase() + " - ";
           data.trackList[i].id = (i + 1 < 10 ? "0" : "") + (i + 1);
@@ -450,6 +452,10 @@
         document
           .getElementById("download")
           .addEventListener("click", () => downloadImg(timeRangeSlug));
+        }
+        else
+        alert("No cuentas con información suficiente para generar el top :(")
+        
       },
     });
   }
@@ -485,6 +491,10 @@
           json: true,
         };
         console.log("Son " + data.artists.length + " artistas");
+        if(data.artists.length > 0)
+        {
+
+        
         for (var i = 0; i < data.artists.length; i++) {
           if (i == 0) artists1.push(data.artists[i]);
         }
@@ -537,6 +547,9 @@
         document
           .getElementById("download")
           .addEventListener("click", () => downloadImgArtist(timeRangeSlug));
+        }
+        else
+        alert("No cuentas con información suficiente para generar el top :(")
       },
     });
   }
