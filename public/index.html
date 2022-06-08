@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="styles.css">
     <script src="jquery.js"></script>
     <script src="ConsumeWS.js"></script>
+    <script src="textFit.js"></script>
     <!-- <style type="text/css">
       #login,
       #loggedin {
@@ -76,35 +77,12 @@
             <button class="time-btn" id="ar_long_term">Los de toda la vida</button>
           </div>
         
-         <!--  <div class="buttons">
-            <p>Rolas</p>
-          <button type="submit" onclick="retrieveTracks('short_term')">
-            Este mes
-          </button>
-          <button type="submit" onclick="retrieveTracks('medium_term')">
-            Últimos 6 meses
-          </button>
-          <button type="submit" onclick="retrieveTracks('long_term')">
-            De toda la vida
-          </button>
-        </div>
-        
-          <div class="buttons">
-            <p>Artistas</p>
-          <button type="submit" onclick="retrieveArtists('short_term')">
-            Este mes
-          </button>
-          <button type="submit" onclick="retrieveArtists('medium_term')">
-            Últimos 6 meses
-          </button>
-          <button type="submit" onclick="retrieveArtists('long_term')">
-            De toda la vida
-          </button>
-        </div> -->
+         
           <div id="toptify" bis_skin_checked="1"></div>
           <div id="toptify-artists" bis_skin_checked="1"></div>
     </div>
       <script id="user-profile-template" type="text/x-handlebars-template">
+        <h2>Tu Top Tier de Rolitas</h2>  
         <div class='receiptContainer'>
           
           
@@ -113,70 +91,90 @@
             {{#each tracks1}}
               
                 
-                <td class='song'>
-                  {{this.name}}
-                  {{#each this.artists}}
-                    <span>
-                      {{this.name}}
-                    </span>
-                  {{/each}}
-                </td>
-                
+            <td class='album'>
+              <!--  <img src="{{this.album.images.0.url}}" class="albumImg" alt="{{this.name}}"/>
+                -->
+               <img src="{{this.album.images.0.url}}" class="albumImg" alt="{{this.name}}"/>
+               
+               <div class="centered">{{this.name}}
+                 {{#each this.artists}}
+                   <span>
+                     {{this.name}}
+                   </span>
+                 {{/each}}</div>
+           </td>
               
             {{/each}}
           </tr>
+          
             <tr>
             {{#each tracks2}}
-                <td class='song'>
-                  {{this.name}}
-                  {{#each this.artists}}
-                    <span>
-                      {{this.name}}
-                    </span>
-                  {{/each}}
-                </td>
+            <td class='album'>
+              <!--  <img src="{{this.album.images.0.url}}" class="albumImg" alt="{{this.name}}"/>
+                -->
+               <img src="{{this.album.images.0.url}}" class="albumImg" alt="{{this.name}}"/>
+               
+               <div class="centered">{{this.name}}
+                 {{#each this.artists}}
+                   <span>
+                     {{this.name}}
+                   </span>
+                 {{/each}}</div>
+           </td>
                 
               
             {{/each}}
           </tr>
             <tr>
             {{#each tracks3}}
-                <td class='song'>
-                  {{this.name}}
-                  {{#each this.artists}}
-                    <span>
-                      {{this.name}}
-                    </span>
-                  {{/each}}
-                </td>
+            <td class='album'>
+              <!--  <img src="{{this.album.images.0.url}}" class="albumImg" alt="{{this.name}}"/>
+                -->
+               <img src="{{this.album.images.0.url}}" class="albumImg" alt="{{this.name}}"/>
+               
+               <div class="centered">{{this.name}}
+                 {{#each this.artists}}
+                   <span>
+                     {{this.name}}
+                   </span>
+                 {{/each}}</div>
+           </td>
                 
               
             {{/each}}
           </tr>
             <tr>
             {{#each tracks4}}
-                <td class='song'>
-                  {{this.name}}
-                  {{#each this.artists}}
-                    <span>
-                      {{this.name}}
-                    </span>
-                  {{/each}}
-                </td>
+            <td class='album'>
+              <!--  <img src="{{this.album.images.0.url}}" class="albumImg" alt="{{this.name}}"/>
+                -->
+               <img src="{{this.album.images.0.url}}" class="albumImg" alt="{{this.name}}"/>
+               
+               <div class="centered">{{this.name}}
+                 {{#each this.artists}}
+                   <span>
+                     {{this.name}}
+                   </span>
+                 {{/each}}</div>
+           </td>
                 
               
             {{/each}}
           </tr>
             <tr>
             {{#each tracks5}}
-                <td class='song'>
-                  {{this.name}}
-                  {{#each this.artists}}
-                    <span>
-                      {{this.name}}
-                    </span>
-                  {{/each}}
-                </td>
+            <td class='album'>
+              <!--  <img src="{{this.album.images.0.url}}" class="albumImg" alt="{{this.name}}"/>
+                -->
+               <img src="{{this.album.images.0.url}}" class="albumImg" alt="{{this.name}}"/>
+               
+               <div class="centered">{{this.name}}
+                 {{#each this.artists}}
+                   <span>
+                     {{this.name}}
+                   </span>
+                 {{/each}}</div>
+           </td>
                 
               
             {{/each}}
@@ -186,11 +184,12 @@
         </div>
         
         
-        <button class="time-btn" id="download">¡Descarga tu top!</button>
+        <!-- <button class="time-btn">Toptify</button> -->
         <!-- <script data-ad-client="ca-pub-9313350967876991" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->
         </script>
       <script id="user-profile-template-artist" type="text/x-handlebars-template">
         
+        <h2>Tu Top Tier de Artistas</h2>  
         <div class='artistsContainer'>
           
           
@@ -200,7 +199,7 @@
             {{#each artists1}}
               
                 <td class='name'>
-                    <img src="{{this.images.2.url}}" class="artistImg"/>
+                    <img src="{{this.images.0.url}}" class="artistImg" alt="{{this.name}}"/>
                 </td>
               
             {{/each}}
@@ -209,7 +208,7 @@
             {{#each artists2}}
               
                 <td class='name'>
-                    <img src="{{this.images.2.url}}" class="artistImg"/>
+                    <img src="{{this.images.0.url}}" class="artistImg" alt="{{this.name}}"/>
                 </td>
               
             {{/each}}
@@ -218,7 +217,7 @@
             {{#each artists3}}
               
                 <td class='name'>
-                    <img src="{{this.images.2.url}}" class="artistImg"/>
+                    <img src="{{this.images.0.url}}" class="artistImg" alt="{{this.name}}"/>
                 </td>
               
             {{/each}}
@@ -227,7 +226,7 @@
             {{#each artists4}}
               
                 <td class='name'>
-                    <img src="{{this.images.2.url}}" class="artistImg"/>
+                    <img src="{{this.images.0.url}}" class="artistImg" alt="{{this.name}}"/>
                 </td>
               
             {{/each}}
@@ -237,7 +236,7 @@
               
                 
                 <td class='name'>
-                    <img src="{{this.images.2.url}}" class="artistImg"/>
+                    <img src="{{this.images.0.url}}" class="artistImg" alt="{{this.name}}"/>
                 </td>
               
             {{/each}}
@@ -340,6 +339,7 @@
   }
 
   function retrieveTracks(timeRangeSlug, domNumber, domPeriod) {
+    let width = 128;
     var userProfileSource = document.getElementById(
         "user-profile-template"
       ).innerHTML,
@@ -448,6 +448,8 @@
           name: displayName,
           period: domPeriod,
         });
+
+        textFit(document.getElementsByClassName("centered"), {alignHoriz: true, alignVert: true, minFontSize:10, maxFontSize: 17});
 
         document
           .getElementById("download")

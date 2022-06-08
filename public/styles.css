@@ -19,6 +19,8 @@ h1 {
 h2 {
   font-size: 2.5rem;
   margin-top: 0px;
+  font-weight: bold;
+  font-family: "Open Sans", sans-serif;
 }
 .container h2 {
   text-align: center;
@@ -190,13 +192,50 @@ p {
   height: 128px;
   display: block;
 }
+.albumImg {
+  width: 129px;
+  height: 126px;
+  display: block;
+  filter: blur(5px);
+  opacity: 0.4;
+  background-color: #000;
+}
+.album {
+  width: 128px;
+  height: 128px;
+  position: relative;
+  text-align: center;
+  color: white;
+  /* overflow: auto; */
+  /* border-style: solid;
+  border-width: thin;
+  border-color: red; */
+}
+.name {
+  overflow: auto;
+}
+
+/* Centered text */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 110px;
+  height: 110px;
+  transform: translate(-50%, -50%);
+  filter: drop-shadow(2px 4px 1px #000);
+  /* border-style: solid;
+  border-width: thin;
+  border-color: red; */
+  /* font-size: 1em; */
+}
 #download {
   margin-top: 2vh;
 }
 p,
 table,
 .date {
-  font-family: "toptify", "Open Sans", Courier, monospace;
+  font-family: "Open Sans", Courier, monospace;
   /* font-size: 1.5rem;
   line-height: 3rem; */
   font-size: 20px;
@@ -228,10 +267,7 @@ tr {
   vertical-align: top; */
   padding-left: 200px;
 }
-.name {
-  /* width: 325px; */
-  overflow: auto;
-}
+
 .song {
   /* width: 325px; */
 
