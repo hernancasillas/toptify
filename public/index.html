@@ -11,6 +11,8 @@
     <script src="jquery.js"></script>
     <script src="ConsumeWS.js"></script>
     <script src="textFit.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <!-- <style type="text/css">
       #login,
       #loggedin {
@@ -456,7 +458,14 @@
           .addEventListener("click", () => downloadImg(timeRangeSlug));
         }
         else
-        alert("No cuentas con información suficiente para generar el top :(")
+        
+        Swal.fire({
+  position: 'center',
+  icon: 'warning',
+  title: 'No cuentas con información suficiente para generar el top :(',
+  showConfirmButton: false,
+  timer: 3000
+})
         
       },
     });
@@ -551,7 +560,13 @@
           .addEventListener("click", () => downloadImgArtist(timeRangeSlug));
         }
         else
-        alert("No cuentas con información suficiente para generar el top :(")
+        Swal.fire({
+  position: 'center',
+  icon: 'warning',
+  title: 'No cuentas con información suficiente para generar el top :(',
+  showConfirmButton: false,
+  timer: 3000
+})
       },
     });
   }
