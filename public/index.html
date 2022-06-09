@@ -201,46 +201,95 @@
             <tr>
             {{#each artists1}}
               
-                <td class='name'>
-                    <img src="{{this.images.0.url}}" class="artistImg" alt="{{this.name}}"/>
-                </td>
+            <td class='name'>
+              <!--  <img src="{{this.album.images.0.url}}" class="albumImg" alt="{{this.name}}"/>
+                -->
+               <img src="{{this.images.0.url}}" class="artistImg" alt="{{this.name}}"/>
+               
+               <div class="centeredArtist">
+                
+                   <span>
+                     {{this.name}}
+                   </span>
+                </div>
+           </td>  
               
             {{/each}}
             </tr>
             <tr>
             {{#each artists2}}
               
-                <td class='name'>
-                    <img src="{{this.images.0.url}}" class="artistImg" alt="{{this.name}}"/>
-                </td>
+            <td class='name'>
+              <!--  <img src="{{this.album.images.0.url}}" class="albumImg" alt="{{this.name}}"/>
+                -->
+               <img src="{{this.images.0.url}}" class="artistImg" alt="{{this.name}}"/>
+               
+               <div class="centeredArtist">
+                
+                   <span>
+                     {{this.name}}
+                   </span>
+                </div>
+           </td>  
               
             {{/each}}
             </tr>
             <tr>
             {{#each artists3}}
               
-                <td class='name'>
-                    <img src="{{this.images.0.url}}" class="artistImg" alt="{{this.name}}"/>
-                </td>
+            <td class='name'>
+              <!--  <img src="{{this.album.images.0.url}}" class="albumImg" alt="{{this.name}}"/>
+                -->
+               <img src="{{this.images.0.url}}" class="artistImg" alt="{{this.name}}"/>
+               
+               <div class="centeredArtist">
+                
+                   <span>
+                     {{this.name}}
+                   </span>
+                </div>
+           </td>  
               
             {{/each}}
             </tr>
             <tr>
             {{#each artists4}}
               
-                <td class='name'>
+                <!-- <td class='name'>
                     <img src="{{this.images.0.url}}" class="artistImg" alt="{{this.name}}"/>
-                </td>
-              
+                    
+                </td> -->
+                <td class='name'>
+                  <!--  <img src="{{this.album.images.0.url}}" class="albumImg" alt="{{this.name}}"/>
+                    -->
+                   <img src="{{this.images.0.url}}" class="artistImg" alt="{{this.name}}"/>
+                   
+                   <div class="centeredArtist">
+                    
+                       <span>
+                         {{this.name}}
+                       </span>
+                    </div>
+               </td>  
             {{/each}}
+            
             </tr>
             <tr>
             {{#each artists5}}
               
                 
-                <td class='name'>
-                    <img src="{{this.images.0.url}}" class="artistImg" alt="{{this.name}}"/>
-                </td>
+            <td class='name'>
+              <!--  <img src="{{this.album.images.0.url}}" class="albumImg" alt="{{this.name}}"/>
+                -->
+               <img src="{{this.images.0.url}}" class="artistImg" alt="{{this.name}}"/>
+               
+               <div class="centeredArtist">
+                
+                   <span>
+                     {{this.name}}
+                   </span>
+                </div>
+           </td>  
               
             {{/each}}
             </tr>
@@ -555,7 +604,7 @@
           name: displayName,
           period: domPeriod,
         });
-
+        textFit(document.getElementsByClassName("centeredArtist"), {alignHoriz: true, alignVert: true, minFontSize:8, maxFontSize: 21});
         document
           .getElementById("download")
           .addEventListener("click", () => downloadImgArtist(timeRangeSlug));

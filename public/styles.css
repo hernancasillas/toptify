@@ -194,6 +194,7 @@ p {
   width: 130px;
   height: 128px;
   display: block;
+  object-fit: cover;
 }
 .albumImg {
   width: 129px;
@@ -215,7 +216,12 @@ p {
   border-color: red; */
 }
 .name {
-  overflow: auto;
+  /* width: 128px;
+  height: 128px; */
+  position: relative;
+  text-align: center;
+  color: white;
+  /* overflow: auto; */
 }
 
 /* Centered text */
@@ -227,6 +233,19 @@ p {
   height: 110px;
   transform: translate(-50%, -50%);
   filter: drop-shadow(2px 4px 1px #000);
+  /* border-style: solid;
+  border-width: thin;
+  border-color: red; */
+  /* font-size: 1em; */
+}
+.centeredArtist {
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  width: 110px;
+  height: 35px;
+  transform: translate(-50%, -50%);
+  filter: drop-shadow(3px 3px 0px #000);
   /* border-style: solid;
   border-width: thin;
   border-color: red; */
