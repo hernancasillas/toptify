@@ -6,7 +6,7 @@
       rel="stylesheet"
       href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"
     />
-    <title>Toptify</title>
+    <title>Tier List Musical</title>
     <link rel="stylesheet" href="styles.css">
     <script src="jquery.js"></script>
     <script src="ConsumeWS.js"></script>
@@ -33,7 +33,7 @@
 				<div class="header-section" bis_skin_checked="1">
 					<div class="row" bis_skin_checked="1">
 						<div class="col-12" bis_skin_checked="1">
-							<h1>Toptify</h1>
+							<h1>🎵 Tier List 🎵</h1>
 							
 						</div>
 						<div class="col-12" bis_skin_checked="1">
@@ -64,7 +64,7 @@
 			</div>
       <div id="loggedin" style="display: none;" bis_skin_checked="1">
         <br>
-        <h1>Toptify</h1>
+        <h1>🎵 Tier List 🎵</h1>
         <br>
         <p>Rolitas</p>
           <div id="options" bis_skin_checked="1">
@@ -85,7 +85,7 @@
           <div id="toptify-artists" bis_skin_checked="1"></div>
     </div>
       <script id="user-profile-template" type="text/x-handlebars-template">
-        <h2>Tu Top Tier de Rolitas</h2>  
+        <h2>Tu Tier List de Rolitas</h2>  
         <div class='receiptContainer'>
           
           
@@ -97,6 +97,7 @@
             <td class='album'>
               <!--  <img src="{{this.album.images.0.url}}" class="albumImg" alt="{{this.name}}"/>
                 -->
+                <a href="{{this.external_urls.spotify}}" style="color: white;">
                <img src="{{this.album.images.0.url}}" class="albumImg" alt="{{this.name}}"/>
                
                <div class="centered">{{this.name}}
@@ -105,6 +106,7 @@
                      {{this.name}}
                    </span>
                  {{/each}}</div>
+                </a>
            </td>
               
             {{/each}}
@@ -114,7 +116,7 @@
             {{#each tracks2}}
             <td class='album'>
               <!--  <img src="{{this.album.images.0.url}}" class="albumImg" alt="{{this.name}}"/>
-                -->
+                --><a href="{{this.external_urls.spotify}}" style="color: white;">
                <img src="{{this.album.images.0.url}}" class="albumImg" alt="{{this.name}}"/>
                
                <div class="centered">{{this.name}}
@@ -123,6 +125,7 @@
                      {{this.name}}
                    </span>
                  {{/each}}</div>
+                </a>
            </td>
                 
               
@@ -133,6 +136,7 @@
             <td class='album'>
               <!--  <img src="{{this.album.images.0.url}}" class="albumImg" alt="{{this.name}}"/>
                 -->
+                <a href="{{this.external_urls.spotify}}" style="color: white;">
                <img src="{{this.album.images.0.url}}" class="albumImg" alt="{{this.name}}"/>
                
                <div class="centered">{{this.name}}
@@ -141,6 +145,7 @@
                      {{this.name}}
                    </span>
                  {{/each}}</div>
+                </a>
            </td>
                 
               
@@ -151,6 +156,7 @@
             <td class='album'>
               <!--  <img src="{{this.album.images.0.url}}" class="albumImg" alt="{{this.name}}"/>
                 -->
+                <a href="{{this.external_urls.spotify}}" style="color: white;">
                <img src="{{this.album.images.0.url}}" class="albumImg" alt="{{this.name}}"/>
                
                <div class="centered">{{this.name}}
@@ -159,6 +165,7 @@
                      {{this.name}}
                    </span>
                  {{/each}}</div>
+                </a>
            </td>
                 
               
@@ -169,6 +176,7 @@
             <td class='album'>
               <!--  <img src="{{this.album.images.0.url}}" class="albumImg" alt="{{this.name}}"/>
                 -->
+                <a href="{{this.external_urls.spotify}}" style="color: white;">
                <img src="{{this.album.images.0.url}}" class="albumImg" alt="{{this.name}}"/>
                
                <div class="centered">{{this.name}}
@@ -177,6 +185,7 @@
                      {{this.name}}
                    </span>
                  {{/each}}</div>
+                </a>
            </td>
                 
               
@@ -186,13 +195,13 @@
           
         </div>
         
-        
-        <!-- <button class="time-btn">Toptify</button> -->
+        <br>
+        <!-- <button class="time-btn" id="get_playlist" onclick="generaPlaylist()">Genera una playlist</button> -->
         <!-- <script data-ad-client="ca-pub-9313350967876991" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->
         </script>
       <script id="user-profile-template-artist" type="text/x-handlebars-template">
         
-        <h2>Tu Top Tier de Artistas</h2>  
+        <h2>Tu Tier List de Artistas</h2>  
         <div class='artistsContainer'>
           
           
@@ -204,14 +213,16 @@
             <td class='name'>
               <!--  <img src="{{this.album.images.0.url}}" class="albumImg" alt="{{this.name}}"/>
                 -->
-               <img src="{{this.images.0.url}}" class="artistImg" alt="{{this.name}}"/>
+                <a href="{{this.external_urls.spotify}}" target="_blank">
+                  <img src="{{this.images.0.url}}" class="artistImg" alt="{{this.name}}"/>
+                 </a>
                
-               <div class="centeredArtist">
+               <!-- <div class="centeredArtist">
                 
                    <span>
                      {{this.name}}
                    </span>
-                </div>
+                </div> -->
            </td>  
               
             {{/each}}
@@ -222,14 +233,16 @@
             <td class='name'>
               <!--  <img src="{{this.album.images.0.url}}" class="albumImg" alt="{{this.name}}"/>
                 -->
-               <img src="{{this.images.0.url}}" class="artistImg" alt="{{this.name}}"/>
+                <a href="{{this.external_urls.spotify}}" target="_blank">
+                  <img src="{{this.images.0.url}}" class="artistImg" alt="{{this.name}}"/>
+                 </a>
                
-               <div class="centeredArtist">
+               <!-- <div class="centeredArtist">
                 
                    <span>
                      {{this.name}}
                    </span>
-                </div>
+                </div> -->
            </td>  
               
             {{/each}}
@@ -239,15 +252,15 @@
               
             <td class='name'>
               <!--  <img src="{{this.album.images.0.url}}" class="albumImg" alt="{{this.name}}"/>
-                -->
+                --><a href="{{this.external_urls.spotify}}" target="_blank">
                <img src="{{this.images.0.url}}" class="artistImg" alt="{{this.name}}"/>
-               
-               <div class="centeredArtist">
+              </a>
+              <!--  <div class="centeredArtist">
                 
                    <span>
                      {{this.name}}
                    </span>
-                </div>
+                </div> -->
            </td>  
               
             {{/each}}
@@ -261,15 +274,15 @@
                 </td> -->
                 <td class='name'>
                   <!--  <img src="{{this.album.images.0.url}}" class="albumImg" alt="{{this.name}}"/>
-                    -->
-                   <img src="{{this.images.0.url}}" class="artistImg" alt="{{this.name}}"/>
-                   
-                   <div class="centeredArtist">
+                    --><a href="{{this.external_urls.spotify}}" target="_blank">
+               <img src="{{this.images.0.url}}" class="artistImg" alt="{{this.name}}"/>
+              </a>
+                   <!-- <div class="centeredArtist">
                     
                        <span>
                          {{this.name}}
                        </span>
-                    </div>
+                    </div> -->
                </td>  
             {{/each}}
             
@@ -281,14 +294,16 @@
             <td class='name'>
               <!--  <img src="{{this.album.images.0.url}}" class="albumImg" alt="{{this.name}}"/>
                 -->
+                <a href="{{this.external_urls.spotify}}" target="_blank">
                <img src="{{this.images.0.url}}" class="artistImg" alt="{{this.name}}"/>
+              </a>
                
-               <div class="centeredArtist">
+               <!-- <div class="centeredArtist">
                 
                    <span>
                      {{this.name}}
                    </span>
-                </div>
+                </div> -->
            </td>  
               
             {{/each}}
@@ -297,12 +312,18 @@
             
         </div>
         <br><br>
-        <!--<p><a href="https://www.youtube.com/watch?v=aSLZFdqwh7E">¿Por qué Stan?</a></p>-->
+        <div style="margin: 0 auto;
+        text-align: center;  ">
+        <p>Provided by</p>
+        
+        <img src="images/Spotify_Logo_RGB_Green.png" alt="Spotify_Logo" style="width: 150px; display: block;">
+        <br>
         <!-- <button class="time-btn" id="download">Download Image</button> -->
         <!-- <script data-ad-client="ca-pub-9313350967876991" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->
         </script>
         
-				
+      </div>
+				<br>
     </div>
 
    
@@ -620,6 +641,42 @@
       },
     });
   }
+  
+  function getPlaylist(timeRangeSlug, domNumber, domPeriod) {
+
+
+    console.log("GENERANDO PLAYLIST");
+
+   /*  Swal.fire({
+  position: 'center',
+  icon: 'warning',
+  title: 'Estás a punto de generar una playlist con tu tier list, deseas continuar?',
+  showConfirmButton: false,
+  timer: 3000
+}) */
+
+
+
+    var userProfileSource = document.getElementById(
+        "user-profile-template-artist"
+      ).innerHTML,
+      userProfileTemplate = Handlebars.compile(userProfileSource),
+      userProfilePlaceholder = document.getElementById("toptify-artists");
+    var today = new Date();
+    var displayName = "RECEIPTIFY";
+    var dateOptions = {
+      weekday: "long",
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    };
+    let artists1 = [];
+    let artists2 = [];
+    let artists3 = [];
+    let artists4 = [];
+    let artists5 = [];
+    
+  }
 
        /*  var oauthSource = document.getElementById("oauth-template").innerHTML,
           oauthTemplate = Handlebars.compile(oauthSource),
@@ -701,6 +758,13 @@
       },
       false
     );
+    /* document.getElementById("get_playlist").addEventListener(
+      "click",
+      function () {
+        getPlaylist("long_term", 3, "ALL TIME");
+      },
+      false
+    ); */
           
         }
       })();

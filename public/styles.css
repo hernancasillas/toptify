@@ -200,8 +200,8 @@ p {
   width: 129px;
   height: 126px;
   display: block;
-  filter: blur(5px);
-  opacity: 0.4;
+  filter: blur(8px);
+  opacity: 0;
   background-color: #000;
 }
 .album {
