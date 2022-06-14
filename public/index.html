@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=0.7">
     <link rel="stylesheet" href="styles.css">
     <script src="jquery.js"></script>
-    <script src="ConsumeWS.js"></script>
+    
     <script src="textFit.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
@@ -402,7 +402,7 @@
       var dataURL = canvas.toDataURL("image/png", 1.0);
       document.body.removeChild(clone);
       var link = document.createElement("a");
-      console.log(dataURL);
+      //console.log(dataURL);
       link.href = dataURL;
       link.download = `${fileName}.png`;
       document.body.appendChild(link);
@@ -419,7 +419,7 @@
       var dataURL = canvas.toDataURL("image/png", 1.0);
       document.body.removeChild(clone);
       var link = document.createElement("a");
-      console.log(dataURL);
+      //console.log(dataURL);
       link.href = dataURL;
       link.download = `${fileName}.png`;
       document.body.appendChild(link);
@@ -477,9 +477,9 @@
                 data.trackList[i].artists[j].name + ", ";
             }
 
-            console.log(
+            /* console.log(
               data.trackList[i].name + data.trackList[i].artists[j].name
-            );
+            ); */
             
           }
           switch(i)
@@ -519,14 +519,14 @@
         
         
 
-        console.log(data.trackList);
+        /* console.log(data.trackList);
         console.log(tracks1);
         console.log(tracks2);
         console.log(tracks3);
         console.log(tracks4);
         console.log(tracks5);
         
-        console.log(data.date);
+        console.log(data.date); */
 
         userProfilePlaceholder.innerHTML = userProfileTemplate({
           tracks1: tracks1,
@@ -541,9 +541,9 @@
 
         textFit(document.getElementsByClassName("centered"), {alignHoriz: true, alignVert: true, minFontSize:10, maxFontSize: 17});
 
-        document
+        /* document
           .getElementById("download")
-          .addEventListener("click", () => downloadImg(timeRangeSlug));
+          .addEventListener("click", () => downloadImg(timeRangeSlug)); */
         }
         else
         
@@ -590,7 +590,7 @@
           date: today.toLocaleDateString("en-US", dateOptions).toUpperCase(),
           json: true,
         };
-        console.log("Son " + data.artists.length + " artistas");
+        /* console.log("Son " + data.artists.length + " artistas"); */
         if(data.artists.length > 0)
         {
 
@@ -604,8 +604,8 @@
       seconds = ((data.total % 60000) / 1000).toFixed(0);
       data.total = minutes + ":" + (seconds < 10 ? "0" : "") + seconds;  */
 
-        console.log(data.artists);
-        console.log(data.artists[1].images[1].url);
+        /* console.log(data.artists);
+        console.log(data.artists[1].images[1].url); */
 
         if(data.artists.length >= 13)
         {
@@ -646,9 +646,9 @@
           period: domPeriod,
         });
         textFit(document.getElementsByClassName("centeredArtist"), {alignHoriz: true, alignVert: true, minFontSize:8, maxFontSize: 21});
-        document
+        /* document
           .getElementById("download")
-          .addEventListener("click", () => downloadImgArtist(timeRangeSlug));
+          .addEventListener("click", () => downloadImgArtist(timeRangeSlug)); */
         }
         else
         Swal.fire({
@@ -665,7 +665,7 @@
   function getPlaylist(timeRangeSlug, domNumber, domPeriod) {
 
 
-    console.log("GENERANDO PLAYLIST");
+    /* console.log("GENERANDO PLAYLIST"); */
 
    /*  Swal.fire({
   position: 'center',
@@ -727,7 +727,7 @@
               success: function (response) {
                 /* userProfilePlaceholder.innerHTML =
                   userProfileTemplate(response); */
-                console.log("SI SE PUDO");
+                /* console.log("SI SE PUDO"); */
                 $("#login").hide();
                 $("#loggedin").show();
               },
