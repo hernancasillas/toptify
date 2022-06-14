@@ -215,6 +215,17 @@ p {
   border-width: thin;
   border-color: red; */
 }
+.botonCollapsible {
+  background-color: #1db954;
+  color: white;
+  font-family: "Open Sans";
+  font-size: 20px;
+}
+.urlLink {
+  color: black;
+  font-family: "Open Sans";
+  font-size: 20px;
+}
 .name {
   /* width: 128px;
   height: 128px; */

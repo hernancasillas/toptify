@@ -12,6 +12,7 @@
     <script src="ConsumeWS.js"></script>
     <script src="textFit.js"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- <style type="text/css">
       #login,
@@ -312,6 +313,21 @@
             
         </div>
         <br><br>
+        <button type="button" class="btn botonCollapsible" data-toggle="collapse" data-target="#demo">¿Quienes son esos?</button>
+        <br>
+  <div id="demo" class="collapse" style="text-align: center;">
+    
+      {{#each allArtists}}
+            
+                <a href="{{this.external_urls.spotify}}" class="urlLink" target="_blank" style="color: black;">
+                  <p>{{this.name}}</p>
+                 </a>
+            
+            {{/each}}
+      
+    
+  </div>
+        <br><br>
         <div style="margin: 0 auto;
         text-align: center;  ">
         <p>Provided by</p>
@@ -560,6 +576,7 @@
     let artists3 = [];
     let artists4 = [];
     let artists5 = [];
+    let allArtists = [];
     $.ajax({
       url: `https://api.spotify.com/v1/me/top/artists?limit=13&time_range=${timeRangeSlug}`,
       headers: {
@@ -579,6 +596,8 @@
         
         for (var i = 0; i < data.artists.length; i++) {
           if (i == 0) artists1.push(data.artists[i]);
+
+          allArtists.push(data.artists[i]);
         }
         /*       minutes = Math.floor(data.total / 60000);
       seconds = ((data.total % 60000) / 1000).toFixed(0);
@@ -620,7 +639,7 @@
           artists3: artists3,
           artists4: artists4,
           artists5: artists5,
-
+          allArtists: allArtists,
           num: domNumber,
           name: displayName,
           period: domPeriod,
@@ -675,6 +694,7 @@
     let artists3 = [];
     let artists4 = [];
     let artists5 = [];
+    let allArtists = [];
     
   }
 
